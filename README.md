@@ -9,9 +9,9 @@ If you want to work with DataFrame files in your Java code, you can use the [Cla
 
 You may download the [Demo](https://github.com/kilo52/icecrusher/raw/master/demo/demo.df) file and try out Icecrusher for yourself.
 
-[![Screenshot1](demo/screenshot1.png)](demo/screenshot1.png)
+[![Screenshot1](demo/screenshot1.png)](https://raw.githubusercontent.com/kilo52/icecrusher/master/demo/screenshot1.png)
 
-[![Screenshot2](demo/screenshot2.png)](demo/screenshot2.png)
+[![Screenshot2](demo/screenshot2.png)](https://raw.githubusercontent.com/kilo52/icecrusher/master/demo/screenshot2.png)
 
 ## Installation
 
