@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane styleClass="editor-dialog" xmlns="http://javafx.com/javafx/8.0.171"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kilo52.icecrusher.ui.dialog.FilterDialogController">
+  <children>
+    <VBox prefHeight="100.0">
+      <children>
+        <Label text="Filter">
+          <font>
+            <Font name="System Bold" size="14.0" />
+          </font>
+          <VBox.margin>
+            <Insets bottom="25.0" />
+          </VBox.margin>
+        </Label>
+        <Label text="Specify the column and regex to filter the DataFrame by">
+          <VBox.margin>
+            <Insets left="20.0" right="10.0" top="5.0" />
+          </VBox.margin>
+          <font>
+            <Font size="14.0" />
+          </font>
+        </Label>
+        <JFXComboBox fx:id="cBoxColumns" promptText="Select Column">
+          <VBox.margin>
+            <Insets left="20.0" top="20.0" />
+          </VBox.margin>
+        </JFXComboBox>
+        <JFXTextField fx:id="txtRegex" focusColor="#1822ba"
+          promptText="Regex">
+          <VBox.margin>
+            <Insets left="20.0" right="5.0" top="15.0" />
+          </VBox.margin>
+        </JFXTextField>
+        <JFXCheckBox fx:id="checkBoxTab" checkedColor="#1668ff"
+          selected="true" text="Show Results in New Tab">
+          <VBox.margin>
+            <Insets left="20.0" right="5.0" top="20.0" />
+          </VBox.margin>
+        </JFXCheckBox>
+        <HBox alignment="CENTER">
+          <children>
+            <JFXButton onAction="#onFilter" text="Filter">
+              <HBox.margin>
+                <Insets bottom="5.0" right="5.0" />
+              </HBox.margin>
+              <font>
+                <Font name="System Bold" size="15.0" />
+              </font>
+            </JFXButton>
+          </children>
+          <padding>
+            <Insets top="5.0" />
+          </padding>
+          <VBox.margin>
+            <Insets bottom="5.0" top="30.0" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <StackPane.margin>
+        <Insets />
+      </StackPane.margin>
+      <padding>
+        <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+      </padding>
+    </VBox>
+  </children>
+</StackPane>

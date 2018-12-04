@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Icecrusher
+Comment=A simple editor for DataFrame files
+Exec=/opt/icecrusher/icecrusher
+Icon=/opt/icecrusher/icecrusher.png
+Terminal=false
+Type=Application
+Categories=Unknown

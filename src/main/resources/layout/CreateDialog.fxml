@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane styleClass="create-dialog" xmlns="http://javafx.com/javafx/8.0.171"
+  xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kilo52.icecrusher.ui.dialog.CreateDialogController">
+  <children>
+    <VBox maxWidth="450.0" minWidth="450.0" prefWidth="450.0"
+      BorderPane.alignment="CENTER">
+      <children>
+        <Label text="Create a new DataFrame">
+          <VBox.margin>
+            <Insets bottom="25.0" />
+          </VBox.margin>
+          <font>
+            <Font name="System Bold" size="14.0" />
+          </font>
+        </Label>
+        <JFXCheckBox fx:id="cbIsNullable" checkedColor="#1668ff"
+          selected="true" text="Nullable">
+          <VBox.margin>
+            <Insets left="5.0" right="10.0" top="5.0" />
+          </VBox.margin>
+        </JFXCheckBox>
+        <AnchorPane>
+          <children>
+            <HBox AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+              <children>
+                <Label text="Define all columns">
+                  <padding>
+                    <Insets bottom="10.0" top="10.0" />
+                  </padding>
+                  <HBox.margin>
+                    <Insets />
+                  </HBox.margin>
+                </Label>
+              </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="5.0">
+              <children>
+                <JFXButton buttonType="RAISED" onAction="#onAddColumn"
+                  text="+">
+                  <HBox.margin>
+                    <Insets top="2.0" />
+                  </HBox.margin>
+                  <effect>
+                    <DropShadow />
+                  </effect>
+                  <font>
+                    <Font size="14.0" />
+                  </font>
+                </JFXButton>
+              </children>
+            </HBox>
+          </children>
+        </AnchorPane>
+        <ScrollPane fx:id="scrollPane" hbarPolicy="ALWAYS"
+          vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+          <content>
+            <HBox fx:id="hboxColumns">
+              <children>
+                <AnchorPane>
+                  <children>
+                    <VBox prefHeight="100.0"
+                      AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0">
+                      <children>
+                        <JFXComboBox fx:id="cBoxColType"
+                          promptText="Column Type">
+                          <VBox.margin>
+                            <Insets top="15.0" />
+                          </VBox.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="txtColName"
+                          promptText="Column Name">
+                          <VBox.margin>
+                            <Insets top="10.0" />
+                          </VBox.margin>
+                        </JFXTextField>
+                      </children>
+                    </VBox>
+                  </children>
+                </AnchorPane>
+              </children>
+              <padding>
+                <Insets left="20.0" right="20.0" />
+              </padding>
+            </HBox>
+          </content>
+          <VBox.margin>
+            <Insets />
+          </VBox.margin>
+        </ScrollPane>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+          <children>
+            <JFXButton fx:id="btnCreate" onAction="#onCreate"
+              text="Create">
+              <HBox.margin>
+                <Insets bottom="5.0" right="5.0" />
+              </HBox.margin>
+              <font>
+                <Font name="System Bold" size="15.0" />
+              </font>
+            </JFXButton>
+          </children>
+          <padding>
+            <Insets top="5.0" />
+          </padding>
+          <VBox.margin>
+            <Insets bottom="5.0" top="20.0" />
+          </VBox.margin>
+        </HBox>
+      </children>
+      <padding>
+        <Insets bottom="10.0" left="40.0" right="40.0" top="20.0" />
+      </padding>
+    </VBox>
+  </children>
+</StackPane>

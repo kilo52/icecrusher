@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity"
+  minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../css/dark_theme.css"
+  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.kilo52.icecrusher.ui.FrameController">
+  <children>
+    <BorderPane fx:id="mainBorderPane" prefHeight="561.0"
+      prefWidth="774.0">
+      <bottom>
+        <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+          <children>
+            <Label text="Type:" textFill="WHITE">
+              <HBox.margin>
+                <Insets right="8.0" />
+              </HBox.margin>
+            </Label>
+            <Label fx:id="labelType" textFill="WHITE">
+              <HBox.margin>
+                <Insets right="20.0" />
+              </HBox.margin>
+            </Label>
+            <Label text="Rows:" textFill="WHITE">
+              <HBox.margin>
+                <Insets right="8.0" />
+              </HBox.margin>
+            </Label>
+            <Label fx:id="labelRows" textFill="WHITE">
+              <HBox.margin>
+                <Insets right="20.0" />
+              </HBox.margin>
+            </Label>
+            <Label text="Columns:" textFill="WHITE">
+              <HBox.margin>
+                <Insets right="8.0" />
+              </HBox.margin>
+            </Label>
+            <Label fx:id="labelCols" textFill="WHITE">
+              <HBox.margin>
+                <Insets right="20.0" />
+              </HBox.margin>
+            </Label>
+          </children>
+          <BorderPane.margin>
+            <Insets />
+          </BorderPane.margin>
+          <padding>
+            <Insets bottom="3.0" top="3.0" />
+          </padding>
+        </HBox>
+      </bottom>
+      <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+          <children>
+            <SplitPane fx:id="splitPane" dividerPositions="0.6960352422907489"
+              orientation="VERTICAL" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+              <items>
+                <AnchorPane>
+                  <children>
+                    <Label fx:id="labelHint" alignment="CENTER"
+                      contentDisplay="TOP"
+                      text="Nothing to show&#13;Open a file or create a new DataFrame"
+                      textAlignment="CENTER" AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                      <graphic>
+                        <ImageView fitHeight="96.0" fitWidth="96.0"
+                          pickOnBounds="true" preserveRatio="true">
+                          <image>
+                            <Image url="@../icon/ic_folder_black_48dp.png" />
+                          </image>
+                        </ImageView>
+                      </graphic>
+                      <font>
+                        <Font name="System Bold" size="13.0" />
+                      </font>
+                    </Label>
+                    <JFXTabPane fx:id="mainTabs"
+                      tabClosingPolicy="ALL_TABS"
+                      AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane fx:id="editScene" styleClass="row-adder-pane">
+                  <children>
+                    <VBox AnchorPane.leftAnchor="0.0"
+                      AnchorPane.rightAnchor="0.0">
+                      <children>
+                        <AnchorPane>
+                          <children>
+                            <HBox AnchorPane.leftAnchor="10.0">
+                              <children>
+                                <Label text="Add row to " />
+                                <Label fx:id="editSceneFile" text="file">
+                                  <font>
+                                    <Font name="System Italic"
+                                      size="13.0" />
+                                  </font>
+                                  <HBox.margin>
+                                    <Insets left="5.0" />
+                                  </HBox.margin>
+                                </Label>
+                              </children>
+                            </HBox>
+                            <HBox alignment="TOP_RIGHT"
+                              AnchorPane.rightAnchor="0.0">
+                              <children>
+                                <JFXButton onAction="#onRowAdd"
+                                  styleClass="row-adder-add-button"
+                                  text="Add">
+                                  <HBox.margin>
+                                    <Insets />
+                                  </HBox.margin>
+                                </JFXButton>
+                                <JFXButton onAction="#onRowClose"
+                                  styleClass="row-adder-close-button"
+                                  text="X" />
+                              </children>
+                            </HBox>
+                          </children>
+                        </AnchorPane>
+                        <ScrollPane prefHeight="100.0"
+                          vbarPolicy="NEVER">
+                          <content>
+                            <AnchorPane fx:id="editSceneAnchor" />
+                          </content>
+                        </ScrollPane>
+                      </children>
+                    </VBox>
+                  </children>
+                </AnchorPane>
+              </items>
+            </SplitPane>
+          </children>
+        </AnchorPane>
+      </center>
+      <top>
+        <VBox BorderPane.alignment="CENTER">
+          <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onFileNew"
+                      text="New" />
+                    <MenuItem mnemonicParsing="false" onAction="#onFileOpen"
+                      text="Open..." />
+                    <SeparatorMenuItem
+                      mnemonicParsing="false" />
+                    <MenuItem fx:id="menuSave" mnemonicParsing="false"
+                      onAction="#onFileSave" text="Save" />
+                    <MenuItem fx:id="menuSaveAs"
+                      mnemonicParsing="false" onAction="#onFileSaveAs"
+                      text="Save as..." />
+                    <MenuItem mnemonicParsing="false" onAction="#onFileImport"
+                      text="Import from CSV..." />
+                    <MenuItem fx:id="menuExport"
+                      mnemonicParsing="false" onAction="#onFileExport"
+                      text="Export to CSV..." />
+                    <SeparatorMenuItem
+                      mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#onFileQuit"
+                      text="Quit" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="menuAddRow"
+                      mnemonicParsing="false" onAction="#onEditAddRow"
+                      text="Add Row" />
+                    <MenuItem fx:id="menuAddCol"
+                      mnemonicParsing="false" onAction="#onEditAddColumn"
+                      text="Add Column" />
+                    <SeparatorMenuItem
+                      mnemonicParsing="false" />
+                    <MenuItem fx:id="menuSort" mnemonicParsing="false"
+                      onAction="#onEditSort" text="Sort" />
+                    <MenuItem fx:id="menuFilter"
+                      mnemonicParsing="false" onAction="#onEditFilter"
+                      text="Filter" />
+                    <MenuItem fx:id="menuConvert"
+                      mnemonicParsing="false" onAction="#onEditConvert"
+                      text="Convert" />
+                    <SeparatorMenuItem
+                      mnemonicParsing="false" />
+                    <MenuItem mnemonicParsing="false" onAction="#onPreferences"
+                      text="Preferences" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#onAbout"
+                      text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <AnchorPane>
+              <children>
+                <HBox layoutX="6.0" layoutY="7.0"
+                  AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <children>
+                    <JFXButton buttonType="RAISED" onAction="#onFileNew"
+                      text="+" textAlignment="CENTER">
+                      <cursor>
+                        <Cursor fx:constant="HAND" />
+                      </cursor>
+                      <font>
+                        <Font size="25.0" />
+                      </font>
+                      <HBox.margin>
+                        <Insets />
+                      </HBox.margin>
+                    </JFXButton>
+                  </children>
+                </HBox>
+                <HBox alignment="TOP_RIGHT" layoutX="620.0"
+                  AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <children>
+                    <JFXButton fx:id="btnSave" buttonType="RAISED"
+                      onAction="#onFileSave" text="Save" textFill="#00000026">
+                      <cursor>
+                        <Cursor fx:constant="HAND" />
+                      </cursor>
+                      <HBox.margin>
+                        <Insets />
+                      </HBox.margin>
+                      <font>
+                        <Font size="20.0" />
+                      </font>
+                    </JFXButton>
+                  </children>
+                </HBox>
+              </children>
+              <padding>
+                <Insets bottom="10.0" />
+              </padding>
+            </AnchorPane>
+          </children>
+        </VBox>
+      </top>
+    </BorderPane>
+    <JFXSpinner fx:id="sp" cache="true" radius="25.0">
+      <opaqueInsets>
+        <Insets />
+      </opaqueInsets>
+    </JFXSpinner>
+  </children>
+</StackPane>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="600.0" style="-fx-background-color: #282828;"
+  xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+  fx:controller="com.kilo52.icecrusher.ui.PreferencesController">
+  <children>
+    <BorderPane AnchorPane.bottomAnchor="0.0"
+      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+      AnchorPane.topAnchor="0.0">
+      <center>
+        <AnchorPane BorderPane.alignment="CENTER">
+          <children>
+            <VBox AnchorPane.leftAnchor="0.0"
+              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+              <children>
+                <Label styleClass="preference-separator" text="General"
+                  textFill="#1822ba">
+                  <font>
+                    <Font name="System Bold" size="15.0" />
+                  </font>
+                  <VBox.margin>
+                    <Insets left="10.0" top="5.0" />
+                  </VBox.margin>
+                </Label>
+                <AnchorPane>
+                  <children>
+                    <Label text="Remeber open tabs on start"
+                      textFill="WHITE" wrapText="true"
+                      AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                      <font>
+                        <Font size="15.0" />
+                      </font>
+                    </Label>
+                    <JFXToggleButton fx:id="prefRememberTabs"
+                      contentDisplay="RIGHT" onAction="#onPreferenceChanged"
+                      text=" " AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.rightAnchor="10.0"
+                      AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="190.0">
+                  <children>
+                    <Label text="Clear data after row addition"
+                      textFill="WHITE" wrapText="true"
+                      AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                      <font>
+                        <Font size="15.0" />
+                      </font>
+                    </Label>
+                    <JFXToggleButton fx:id="prefClearAfterRowAdd"
+                      contentDisplay="RIGHT" onAction="#onPreferenceChanged"
+                      selected="true" text=" " AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.rightAnchor="10.0"
+                      AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="154.0">
+                  <children>
+                    <Label text="Always confirm before deleting rows"
+                      textFill="WHITE" wrapText="true"
+                      AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                      <font>
+                        <Font size="15.0" />
+                      </font>
+                    </Label>
+                    <JFXToggleButton fx:id="prefConfirmRowDeletion"
+                      contentDisplay="RIGHT" onAction="#onPreferenceChanged"
+                      selected="true" text=" " AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.rightAnchor="10.0"
+                      AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+                <AnchorPane layoutX="10.0" layoutY="214.0">
+                  <children>
+                    <Label text="Always use Home directory in file dialogs"
+                      textFill="WHITE" wrapText="true"
+                      AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="20.0">
+                      <font>
+                        <Font size="15.0" />
+                      </font>
+                    </Label>
+                    <JFXToggleButton fx:id="prefDialogAlwaysHome"
+                      contentDisplay="RIGHT" onAction="#onPreferenceChanged"
+                      text=" " AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.rightAnchor="10.0"
+                      AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+                <Label layoutX="20.0" layoutY="15.0"
+                  styleClass="preference-separator" text="Appearance"
+                  textFill="#1822ba">
+                  <font>
+                    <Font name="System Bold" size="15.0" />
+                  </font>
+                  <VBox.margin>
+                    <Insets left="10.0" top="5.0" />
+                  </VBox.margin>
+                </Label>
+                <AnchorPane layoutX="10.0" layoutY="94.0">
+                  <children>
+                    <Label text="Show index column" textFill="WHITE"
+                      wrapText="true" AnchorPane.leftAnchor="10.0"
+                      AnchorPane.topAnchor="20.0">
+                      <font>
+                        <Font size="15.0" />
+                      </font>
+                    </Label>
+                    <JFXToggleButton fx:id="prefShowIndex"
+                      contentDisplay="RIGHT" onAction="#onPreferenceChanged"
+                      text=" " AnchorPane.bottomAnchor="0.0"
+                      AnchorPane.rightAnchor="10.0"
+                      AnchorPane.topAnchor="0.0" />
+                  </children>
+                </AnchorPane>
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </center>
+      <top>
+        <AnchorPane styleClass="bigmenubar"
+          BorderPane.alignment="CENTER">
+          <children>
+            <HBox alignment="CENTER_LEFT">
+              <children>
+                <JFXButton contentDisplay="GRAPHIC_ONLY"
+                  onAction="#onClose" text="Close">
+                  <graphic>
+                    <ImageView fitHeight="50.0" fitWidth="56.0"
+                      pickOnBounds="true" preserveRatio="true">
+                      <image>
+                        <Image url="@../icon/ic_back_white_48dp.png" />
+                      </image>
+                    </ImageView>
+                  </graphic>
+                </JFXButton>
+              </children>
+            </HBox>
+            <VBox alignment="CENTER" fillWidth="false"
+              mouseTransparent="true" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+              AnchorPane.topAnchor="0.0">
+              <children>
+                <Label alignment="CENTER" contentDisplay="CENTER"
+                  text="Preferences" textFill="WHITE"
+                  AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="200.0"
+                  AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="10.0">
+                  <font>
+                    <Font size="20.0" />
+                  </font>
+                </Label>
+              </children>
+            </VBox>
+          </children>
+        </AnchorPane>
+      </top>
+    </BorderPane>
+  </children>
+</AnchorPane>

@@ -1,0 +1,567 @@
+
+* {
+    -fx-primary : #282828;
+    -fx-secondary : #383838;
+    -fx-primarytext : #b2b2b2;
+    -fx-secondarytext : #ffffff;
+    -fx-primarylabel : #1668ff;
+    -fx-secondarylabel:#1976d2;
+    -fx-dialog-text : #ffffff;
+    -fx-dialog-prompt-text : #787878;
+    -fx-dialog-input-line : #ffffff;
+}
+
+.root{
+    -fx-background-color: -fx-primary;
+}
+
+#mainTabsContainer{
+    -fx-box-border: transparent;
+}
+
+.split-pane:vertical .split-pane-divider{
+    -fx-background-color: #74747a;
+}
+
+.preference-separator{
+    -fx-text-fill: -fx-primarylabel;
+}
+
+.about-label{
+    -fx-text-fill: -fx-primarylabel;
+}
+
+.menu-bar{
+    -fx-base : -fx-primary;
+    -fx-background-color: -fx-primary;
+}
+
+.context-menu{
+    -fx-background-color:  derive(-fx-primary, 20%);
+}
+
+
+.jfx-button{
+    -fx-text-fill: white;
+    -fx-background-color: -fx-primary;
+    -fx-border-color: -fx-primarylabel;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-font-size: 13pt;
+}
+
+.jfx-toggle-button{
+    -jfx-toggle-color: -fx-primarylabel;
+}
+
+.text-field{
+    -fx-text-fill: -fx-primarytext;
+    -jfx-focus-color: -fx-primary;
+    -fx-text-fill: derive(-fx-primary, 20%);
+}
+
+.jfx-spinner:indeterminate .arc{
+    -fx-stroke: -fx-primarylabel;
+}
+
+.progress-bar-main .track{
+    -fx-background-color: -fx-primary;
+}
+
+.progress-bar-main .bar{
+    -fx-background-color: -fx-secondary;
+    -fx-padding: 5px;
+}
+
+
+
+/**********************************************
+*              Activity Menu Bar              *
+***********************************************/
+
+.bigmenubar{
+    -fx-background-color: #000000;
+}
+
+.bigmenubar .button{
+    -fx-background-color: #000000;
+    -fx-border-color: #000000;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+
+
+/**********************************************
+*                  Snackbar                   *
+***********************************************/
+
+.jfx-snackbar-content{
+     -fx-background-color: -fx-secondarylabel;
+}
+
+.jfx-snackbar-toast{
+     -fx-text-fill: -fx-secondarytext;
+}
+
+.jfx-snackbar .jfx-button{
+    -fx-font-size: 14;
+}
+
+
+
+/**********************************************
+*                  Tab Pane                   *
+***********************************************/
+
+.jfx-tab-pane .tab-selected-line{
+    -fx-background-color: -fx-primarylabel;
+}
+
+.jfx-tab-pane .tab-header-area .jfx-rippler{
+    -jfx-rippler-fill: -fx-primary;
+}
+
+.jfx-tab-pane .menu-item .label{
+    -fx-text-fill: -fx-secondarytext;
+}
+
+.jfx-tab-pane .control-buttons-tab .tab-down-button{
+    -fx-background-color: -fx-primarylabel;
+}
+
+.jfx-tab-pane .control-buttons-tab .jfx-rippler{
+    -jfx-rippler-fill: -fx-primarylabel;
+}
+
+.jfx-tab-pane .button{
+    -fx-text-fill: -fx-primarytext;
+    -fx-background-color: -fx-secondary;
+    -fx-border-color: none;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+}
+
+.jfx-tab-pane .button .jfx-rippler{
+    -jfx-rippler-fill: red;
+}
+
+.tab{
+    -fx-background-color: -fx-secondary;
+}
+
+.tab-header-background{
+    -fx-background-color: -fx-secondary;
+}
+
+.tab-label{
+    -fx-text-fill: -fx-secondarytext;
+}
+
+
+
+/**********************************************
+*              Editor Dialog                  *
+***********************************************/
+
+.editor-dialog{
+    -fx-background-color: -fx-primary;
+    -fx-font-color: -fx-dialog-text;
+}
+
+.editor-dialog .label{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+/********** combo-box **********/
+.editor-dialog .jfx-combo-box{
+    -fx-prompt-text-fill: -fx-dialog-prompt-text;
+}
+
+.editor-dialog .jfx-combo-box .input-line{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.editor-dialog .jfx-combo-box .arrow{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.editor-dialog .jfx-combo-box .list-view{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.editor-dialog .jfx-combo-box .list-cell:selected{
+    -fx-background-color: -fx-primarylabel;
+}
+
+.editor-dialog .jfx-combo-box .list-cell:filled{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-primarylabel;
+}
+
+.editor-dialog .jfx-combo-box .list-cell:filled:hover{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.editor-dialog .jfx-combo-box .list-cell:filled:selected:hover{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.editor-dialog .jfx-combo-box .list-cell .text{
+    -fx-fill: -fx-dialog-text;
+}
+
+.editor-dialog .jfx-combo-box .input-focused-line{
+    -fx-background-color: -fx-primarylabel;
+}
+
+/********** text-field **********/
+.editor-dialog .jfx-text-field{
+    -fx-highlight-fill: -fx-primarylabel;
+    -fx-prompt-text-fill: -fx-dialog-prompt-text;
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.editor-dialog .jfx-text-field .text{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.editor-dialog .jfx-text-field .input-line{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.editor-dialog .jfx-text-field .input-focused-line{
+    -fx-background-color: -fx-primarylabel;
+}
+
+/********** check-box **********/
+.editor-dialog .jfx-check-box{
+    -fx-text-fill: -fx-dialog-text;
+    -fx-checked-color: -fx-primarylabel;
+    -fx-unchecked-color: -fx-primarylabel;
+}
+
+.editor-dialog .jfx-check-box .jfx-rippler .box-container .box{
+    -fx-background-color: -fx-primarylabel;
+    -fx-border-color: -fx-primarylabel;
+}
+
+.editor-dialog .jfx-check-box .jfx-rippler .box-container .box .indeterminate-mark{
+    -fx-background-color: -fx-primarylabel;
+}
+
+/********** button **********/
+.editor-dialog .jfx-button{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.editor-dialog .jfx-button:hover{
+    -fx-background-color: -fx-secondarylabel;
+    -fx-border-color: derive(-fx-secondarylabel, -20%);
+    -fx-text-fill: white;
+}
+
+
+
+/**********************************************
+*              Standard JFXDialog             *
+***********************************************/
+
+.jfx-layout-heading{
+    -fx-background-color: -fx-secondarylabel;
+}
+
+.jfx-layout-heading .label{
+    -fx-text-fill: -fx-dialog-text;
+    -fx-font-size: 12pt;
+}
+
+.jfx-layout-body, .jfx-layout-actions{
+    -fx-background-color: -fx-primary;
+}
+
+.jfx-layout-body .label{
+    -fx-text-fill: -fx-dialog-text;
+    -fx-padding: 20px 0 0 0;
+}
+
+.dialog-button{
+    -fx-border-color: -fx-secondarylabel;
+    -fx-text-fill: -fx-dialog-text;
+    -fx-border-radius: 1px;
+    -fx-background-radius: 3px;
+}
+
+.dialog-button:hover{
+    -fx-background-color: -fx-secondarylabel;
+    -fx-border-color: derive(-fx-secondarylabel, -20%);
+    -fx-text-fill: -fx-dialog-text;
+}
+
+/********** check-box **********/
+.jfx-layout-body .jfx-check-box{
+    -fx-text-fill: -fx-dialog-text;
+    -fx-checked-color: -fx-primarylabel;
+    -fx-unchecked-color: -fx-primarylabel;
+}
+
+.jfx-layout-body .jfx-check-box .jfx-rippler .box-container .box{
+    -fx-background-color: -fx-primarylabel;
+    -fx-border-color: -fx-primarylabel;
+}
+
+.jfx-layout-body .jfx-check-box .jfx-rippler .box-container .box .indeterminate-mark{
+    -fx-background-color: -fx-primarylabel;
+}
+
+
+
+/**********************************************
+*              Create Dialog                  *
+***********************************************/
+
+.create-dialog{
+    -fx-background-color: -fx-primary;
+    -fx-font-color: -fx-dialog-text;
+}
+
+.create-dialog .label{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.create-dialog .scroll-pane{
+    -fx-padding: 0;
+}
+
+.create-dialog .scroll-pane:focused{
+    -fx-background-insets: 0;
+}
+
+.create-dialog .scroll-pane .viewport{
+    -fx-background-color: -fx-secondary;
+}
+
+.create-dialog .scroll-pane .corner{
+    -fx-background-insets: 0;
+}
+
+/********** combo-box **********/
+.create-dialog .jfx-combo-box{
+    -fx-prompt-text-fill: -fx-dialog-prompt-text;
+}
+
+.create-dialog .jfx-combo-box .input-line{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.create-dialog .jfx-combo-box .arrow{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.create-dialog .jfx-combo-box .list-view{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.create-dialog .jfx-combo-box .list-cell:selected{
+    -fx-background-color: -fx-primarylabel;
+}
+
+.create-dialog .jfx-combo-box .list-cell:filled{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: -fx-primarylabel;
+}
+
+.create-dialog .jfx-combo-box .list-cell:filled:hover{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.create-dialog .jfx-combo-box .list-cell:filled:selected:hover{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.create-dialog .jfx-combo-box .list-cell .text{
+    -fx-fill: -fx-dialog-text;
+}
+
+.create-dialog .jfx-combo-box .input-focused-line{
+    -fx-background-color: -fx-primarylabel;
+}
+
+/********** text-field **********/
+.create-dialog .jfx-text-field{
+    -fx-highlight-fill: -fx-primarylabel;
+    -fx-prompt-text-fill: -fx-dialog-prompt-text;
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.create-dialog .jfx-text-field .text{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.create-dialog .jfx-text-field .input-line{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.create-dialog .jfx-text-field .input-focused-line{
+    -fx-background-color: -fx-primarylabel;
+}
+
+/********** check-box **********/
+.create-dialog .jfx-check-box{
+    -fx-text-fill: -fx-dialog-text;
+    -fx-checked-color: -fx-primarylabel;
+    -fx-unchecked-color: -fx-primarylabel;
+}
+
+.create-dialog .jfx-check-box .jfx-rippler .box-container .box{
+    -fx-background-color: -fx-primarylabel;
+    -fx-border-color: -fx-primarylabel;
+}
+
+.create-dialog .jfx-check-box .jfx-rippler .box-container .box .indeterminate-mark{
+    -fx-background-color: -fx-primarylabel;
+}
+
+/********** button **********/
+.create-dialog .jfx-button{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.create-dialog .jfx-button:hover{
+    -fx-background-color: -fx-secondarylabel;
+    -fx-border-color: derive(-fx-secondarylabel, -20%);
+    -fx-text-fill: white;
+}
+
+
+
+/**********************************************
+*              Row Adder Pane                 *
+***********************************************/
+
+.row-adder-pane{
+    -fx-background-color: -fx-secondary;
+}
+
+.row-adder-pane .label{
+    -fx-background-color: -fx-secondary;
+    -fx-text-fill: white;
+}
+
+.row-adder-pane .scroll-pane{
+    -fx-padding: 0;
+}
+
+.row-adder-pane .scroll-pane:focused{
+    -fx-background-insets: 0;
+}
+
+.row-adder-pane .scroll-pane .viewport{
+    -fx-background-color: -fx-secondary;
+}
+
+.row-adder-pane .scroll-pane .corner{
+    -fx-background-insets: 0;
+}
+
+.row-adder-add-button{
+    -fx-border-color: black;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-size: 12pt;
+}
+
+.row-adder-add-button:hover{
+    -fx-background-color: -fx-secondarylabel;
+    -fx-border-color: derive(-fx-secondarylabel, -20%);
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.row-adder-close-button{
+    -fx-border-color: black;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+    -fx-font-size: 12pt;
+    -fx-text-fill: red;
+}
+
+.row-adder-close-button:hover{
+    -fx-background-color: red;
+    -fx-border-color: derive(black, -20%);
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.row-adder-pane .jfx-text-field{
+    -fx-highlight-fill: -fx-primarylabel;
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.row-adder-pane .jfx-text-field{
+    -fx-prompt-text-fill: -fx-dialog-prompt-text;
+    -jfx-focus-color: -fx-dialog-prompt-text;
+}
+
+.row-adder-pane .jfx-text-field .text{
+    -fx-text-fill: -fx-dialog-text;
+}
+
+.row-adder-pane .jfx-text-field .input-line{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.row-adder-pane .jfx-text-field .input-focused-line{
+    -fx-background-color: -fx-primarylabel;
+}
+
+.row-adder-pane .jfx-combo-box{
+    -fx-prompt-text-fill: -fx-dialog-prompt-text;
+}
+
+.row-adder-pane .jfx-combo-box .input-line{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.row-adder-pane .jfx-combo-box .arrow{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.row-adder-pane .jfx-combo-box .list-view{
+    -fx-background-color: -fx-dialog-input-line;
+}
+
+.row-adder-pane .jfx-combo-box .list-cell:selected{
+    -fx-background-color: -fx-primarylabel;
+}
+
+.row-adder-pane .jfx-combo-box .list-cell:filled{
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: -fx-primarylabel;
+}
+
+.row-adder-pane .jfx-combo-box .list-cell:filled:hover{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.row-adder-pane .jfx-combo-box .list-cell:filled:selected:hover{
+    -fx-background: -fx-accent;
+    -fx-background-color: -fx-selection-bar;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.row-adder-pane .jfx-combo-box .list-cell .text{
+    -fx-fill: -fx-dialog-text;
+}
+
+.row-adder-pane .jfx-combo-box .input-focused-line{
+    -fx-background-color: -fx-primarylabel;
+}
